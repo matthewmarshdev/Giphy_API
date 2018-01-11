@@ -51,12 +51,13 @@
         event.preventDefault();
         var celeb = $("#celeb-input").val().trim();
         celebs.push(celeb);
+        $("#celeb-input").val('');
         renderButtons();
       });
 
       renderButtons();
 
-       $("button").on("click", function () {
+       $(document).on("click", ".celeb" , function() {
           // Grabbing and storing the data-name property value from the button
           var celebrity = $(this).attr("data-name");
 
