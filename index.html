@@ -5,13 +5,12 @@
   <meta charset="utf-8">
   <title>GIPHY HOMEWORK</title>
   <link rel="stylesheet" type="css/style.css" href="css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
 
   <div class="container"> 
-    <h1>Reality TV Celebrity Game</h1>
+    <h1>Reality TV Celebrity GIF Gen!</h1>
 
     <!-- Celebrities will get dumped here -->
     <div id="celebs-view"></div><br><br>
@@ -23,6 +22,7 @@
       <!-- Button triggers new celebrity to be added -->
       <input id="add-celeb" type="submit" value="Add Your Celebrity!">
     </form>
+    <div id="gifs"></div>
 
  
 
@@ -71,7 +71,6 @@
             .done(function (response) {
               console.log(queryURL);
               console.log(response);
-              console.log(response.data.images.fixed_height.mp4);
              var results = response.data;
 
               
@@ -82,7 +81,8 @@
                 celebDiv.append(celebImage);
 
                 // Prependng the celebDiv to the HTML page in the "#gifs-appear-here" div
-                $("#gifs-appear-here").prepend(celebDiv);
+                $("#gifs").prepend(celebDiv);
+                
               }
             });
         });
