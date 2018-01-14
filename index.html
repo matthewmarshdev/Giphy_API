@@ -32,7 +32,13 @@
       <!-- Button triggers new celebrity to be added -->
       <input id="add-celeb" type="submit" value="Add Your Celebrity!">
     </form>
-    <div id="gifs"></div>
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+          <div id="gifs"></div>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
 
  
     
@@ -97,11 +103,22 @@
 
                 // Prependng the celebDiv to the HTML page in the "#gifs-appear-here" div
                 $("#gifs").prepend(celebDiv);
-                
+
+
               }
+
+              //this is the method I attempted to get the gif to stop. I get an undefined error, oddly. 
+                $(celebImage).click(
+                function () {
+                  $(this).attr("src", results[i].images.original_still.url);
+                },
+                function () {
+                  $(this).attr("src", results[i].images.original.url);
+                });
             });
         });
 
+       
         
     </script>
   </div>
