@@ -4,13 +4,19 @@
 <head>
   <meta charset="utf-8">
   <title>GIPHY HOMEWORK</title>
-  <link rel="stylesheet" type="css/style.css" href="css/style.css">
-</head>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="style.css" href="style.css">
+  
+</head>
+ 
 <body>
 
   <div class="container"> 
+    <div class="jumbotron">
     <h1>Reality TV Celebrity GIF Gen!</h1>
+    </div>
 
     <!-- Celebrities will get dumped here -->
     <div id="celebs-view"></div><br><br>
@@ -25,6 +31,7 @@
     <div id="gifs"></div>
 
  
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
@@ -37,6 +44,8 @@
         for (var i = 0; i < celebs.length; i++) {
           var a = $("<button>");
           a.addClass("celeb");
+          a.addClass("btn");
+          a.addClass("btn-primary");
           a.attr("data-name", celebs[i]);
           a.text(celebs[i]);
           $("#celebs-view").append(a);
