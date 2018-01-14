@@ -1,8 +1,21 @@
-h1{
-    color: blue;
-    background-color: black;
+html body {
+    background-color: cornflowerblue;
 }
 
-jumbotron {
-    background-color: blue;
+.jumbotron {
+    background-color: bisque;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.jumbotron:hover{
+    background-color: beige;
+}
+
+#input {
+    font-family: 'Roboto Mono', monospace;
+}
+
+#add-celeb {
+    margin-left: auto;
+    margin-right: auto;
 }
